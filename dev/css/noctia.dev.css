@@ -515,8 +515,17 @@ html[data-theme=dark] .nc-code-block {
   color: var(--nc-text);
 }
 .nc-code-block pre code [data-copy] {
-  background-color: var(--nc-hover);
   outline: none;
+}
+.nc-code-block pre code [data-copy]:hover {
+  background-color: var(--nc-hover);
+}
+.nc-code-block pre code [data-copy]:active {
+  background-color: var(--nc-active);
+}
+.nc-code-block pre code [data-copy]:focus-visible {
+  outline: 0.1rem solid var(--nc-focus-ring);
+  outline-offset: -0.1rem;
 }
 .nc-code-block pre code .token-string {
   color: #2563eb;
