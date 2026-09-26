@@ -1,3 +1,4 @@
+export declare function initNoctia(root?: Document | HTMLElement): void;
 export { initCore, setTheme, getTheme, initTheme } from './core';
 export * from './layouts';
 export * from './components';

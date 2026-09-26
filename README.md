@@ -48,7 +48,10 @@ npm install noctia
 **JavaScript**
 
 ```js
-<script type="module" src="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/js/noctia.js"></script>
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/js/noctia.js"
+></script>
 ```
 
 **Auto Initialization**

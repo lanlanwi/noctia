@@ -3,7 +3,7 @@
  * Version: 1.0.0
  * Copyright (c) 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-09-10
+ * Last Updated: 2026-09-26
  * Licensed under the MIT License
  * https://opensource.org/licenses/MIT
  */
@@ -921,6 +921,17 @@ function initComponents(root = document) {
   initDrawer(root);
   initLicense(root);
 }
+
+// src/ts/index.ts
+function initNoctia(root = document) {
+  if (!(root instanceof Document || root instanceof HTMLElement)) {
+    throw new TypeError("initNoctia: Expected a Document or HTMLElement.");
+  }
+  initCore();
+  initLayouts(root);
+  initComponents(root);
+  initFeatures();
+}
 export {
   abortManager,
   applyCrumbSep,
@@ -945,6 +956,7 @@ export {
   initFeatures,
   initLayouts,
   initLicense,
+  initNoctia,
   initTheme,
   nextFrame,
   nextTwoFrame,

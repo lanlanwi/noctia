@@ -3,7 +3,7 @@
  * Version: 1.0.0
  * Copyright (c) 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-09-10
+ * Last Updated: 2026-09-26
  * Licensed under the MIT License
  * https://opensource.org/licenses/MIT
  */
@@ -922,7 +922,7 @@ function initComponents(root = document) {
   initLicense(root);
 }
 
-// src/ts/auto-init.ts
+// src/ts/index.ts
 function initNoctia(root = document) {
   if (!(root instanceof Document || root instanceof HTMLElement)) {
     throw new TypeError("initNoctia: Expected a Document or HTMLElement.");
@@ -932,6 +932,8 @@ function initNoctia(root = document) {
   initComponents(root);
   initFeatures();
 }
+
+// src/ts/auto-init.ts
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => initNoctia(), { once: true });
 } else {
