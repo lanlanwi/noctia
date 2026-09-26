@@ -1,9 +1,0 @@
-import { initNoctia } from './index';
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => initNoctia(), { once: true });
-} else {
-  initNoctia();
-}
-
-export * from './index';

@@ -14,8 +14,6 @@ export function initNoctia(root: Document | HTMLElement = document) {
   initFeatures();
 }
 
-
-
 export { initCore, setTheme, getTheme, initTheme } from './core';
 
 export * from './layouts';
