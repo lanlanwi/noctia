@@ -927,7 +927,7 @@ function enhanceNavigation(elm) {
     removeLink();
     const container = elm.querySelector("ul");
     if (!container) return;
-    const target = document.querySelectorAll(`.${targetClass}`);
+    const target = document.querySelectorAll(`.${targetClass}:not([data-navigation])`);
     target.forEach((t, i) => {
       const id = t.id || `${targetClass}-${i}`;
       t.id = id;
