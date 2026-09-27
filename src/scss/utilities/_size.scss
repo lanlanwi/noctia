@@ -39,7 +39,30 @@ $size-values: (
   1440px: 1440px,
 );
 
+$size-relative: (
+  '0-25': '0.25',
+  '0-5': 0.5,
+  '0-75': 0.75,
+  '0-875': 0.875,
+  1: 1,
+  '1-1': 1.1,
+  '1-2': 1.2,
+  '1-5': 1.5,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  10: 10,
+);
+
+$size-relative-units: (em, rem);
+
+$size-values-relative: tool.append-units($size-relative, $size-relative-units);
+
+$size-values: map.merge($size-values, $size-values-relative);
+
 $size-viewport: (
+  5: 5,
   10: 10,
   20: 20,
   25: 25,
