@@ -5868,6 +5868,18 @@
   aspect-ratio: 2 / 3 !important;
 }
 
+.square {
+  width: auto;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+
+.square-i {
+  width: auto !important;
+  height: 100% !important;
+  aspect-ratio: 1/1 !important;
+}
+
 .spc-auto {
   margin: auto;
 }
@@ -20518,6 +20530,10 @@
   color: hsl(330, 90%, 75%) !important;
 }
 
+.clr-inherit {
+  color: inherit !important;
+}
+
 .bc-none {
   background-color: transparent !important;
 }
@@ -20708,6 +20724,10 @@
 
 .bc-a-pink {
   background-color: hsl(330, 90%, 75%) !important;
+}
+
+.bc-inherit {
+  background-color: inherit !important;
 }
 
 .font-sans {
@@ -21488,6 +21508,10 @@
   border-color: hsl(330, 90%, 75%) !important;
 }
 
+.border-inherit {
+  border-color: inherit !important;
+}
+
 .border-t-theme {
   border-top-color: var(--nc-theme, #ffffff) !important;
 }
@@ -21674,6 +21698,10 @@
 
 .border-t-a-pink {
   border-top-color: hsl(330, 90%, 75%) !important;
+}
+
+.border-t-inherit {
+  border-top-color: inherit !important;
 }
 
 .border-r-theme {
@@ -21864,6 +21892,10 @@
   border-right-color: hsl(330, 90%, 75%) !important;
 }
 
+.border-r-inherit {
+  border-right-color: inherit !important;
+}
+
 .border-b-theme {
   border-bottom-color: var(--nc-theme, #ffffff) !important;
 }
@@ -22052,6 +22084,10 @@
   border-bottom-color: hsl(330, 90%, 75%) !important;
 }
 
+.border-b-inherit {
+  border-bottom-color: inherit !important;
+}
+
 .border-l-theme {
   border-left-color: var(--nc-theme, #ffffff) !important;
 }
@@ -22238,6 +22274,10 @@
 
 .border-l-a-pink {
   border-left-color: hsl(330, 90%, 75%) !important;
+}
+
+.border-l-inherit {
+  border-left-color: inherit !important;
 }
 
 .elm-none {

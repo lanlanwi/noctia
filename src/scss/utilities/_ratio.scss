@@ -29,3 +29,19 @@ $ratio-utilities: (
 );
 
 @include tool.dispatch($ratio-utilities);
+
+// ------------------------------------
+// Utilities
+// ------------------------------------
+
+.square {
+  width: auto;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.square-i {
+  width: auto !important;
+  height: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+}

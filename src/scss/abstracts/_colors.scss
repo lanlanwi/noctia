@@ -3,6 +3,8 @@
 $theme: var(--nc-theme, #ffffff);
 $theme-inverse: var(--nc-theme-inverse, #000000);
 
+$inherit: inherit;
+
 $white: #ffffff;
 $off-white: #f5f5f5;
 $very-light-gray: #eeeeee;
@@ -117,5 +119,12 @@ $accent-colors: (
 $chromatic-colors: map.merge($base-colors, map.merge($main-colors, $accent-colors));
 
 $static-colors: map.merge($neutral-colors, $chromatic-colors);
+
+$static-colors: map.merge(
+  $static-colors,
+  (
+    'inherit': $inherit,
+  )
+);
 
 $colors: map.merge($theme-colors, $static-colors);

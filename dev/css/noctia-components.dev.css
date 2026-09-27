@@ -345,9 +345,6 @@ nav[data-breadcrumb-sep] ul li .nc-separator {
   justify-content: center;
   width: auto;
   max-width: 100%;
-  padding: 0.25em 0.5em;
-  border: 0.1em solid var(--nc-border);
-  border-radius: 0.25em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5;
@@ -365,8 +362,15 @@ nav[data-breadcrumb-sep] ul li .nc-separator {
 .nc-btn:focus-visible {
   outline: 0.1rem solid var(--nc-focus-ring);
 }
+.nc-btn[data-style=simple] {
+  padding: 0.25em 0.5em;
+  border: 0.1em solid var(--nc-border);
+  border-radius: 0.25em;
+}
 .nc-btn[data-style=form] {
+  padding: 0.25em 0.5em;
   border: 0.1em solid var(--nc-neutral);
+  border-radius: 0.25em;
   background-color: var(--nc-background);
 }
 .nc-btn[data-style=form]:hover {
@@ -377,7 +381,8 @@ nav[data-breadcrumb-sep] ul li .nc-separator {
   outline-offset: -0.1em;
 }
 .nc-btn[data-style=neon] {
-  border: none;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
   color: #ffffff;
   background-color: var(--nc-bg-alpha);
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;

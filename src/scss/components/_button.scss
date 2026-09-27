@@ -7,10 +7,6 @@
   width: auto;
   max-width: 100%;
 
-  padding: 0.25em 0.5em;
-  border: 0.1em solid var(--nc-border);
-  border-radius: 0.25em;
-
   font-family: abs.$font-sans;
   font-size: 1em;
   line-height: 1.5;
@@ -31,8 +27,16 @@
     outline: 0.1rem solid var(--nc-focus-ring);
   }
 
+  &[data-style='simple'] {
+    padding: 0.25em 0.5em;
+    border: 0.1em solid var(--nc-border);
+    border-radius: 0.25em;
+  }
+
   &[data-style='form'] {
+    padding: 0.25em 0.5em;
     border: 0.1em solid var(--nc-neutral);
+    border-radius: 0.25em;
 
     background-color: var(--nc-background);
 
@@ -47,7 +51,8 @@
   }
 
   &[data-style='neon'] {
-    border: none;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
 
     color: #ffffff;
     background-color: var(--nc-bg-alpha);
