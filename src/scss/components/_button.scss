@@ -27,6 +27,11 @@
     outline: 0.1rem solid var(--nc-focus-ring);
   }
 
+  &:hover,
+  &:focus-visible {
+    background-color: var(--nc-hover);
+  }
+
   &[data-style='simple'] {
     padding: 0.25em 0.5em;
     border: 0.1em solid var(--nc-border);

@@ -362,6 +362,9 @@ nav[data-breadcrumb-sep] ul li .nc-separator {
 .nc-btn:focus-visible {
   outline: 0.1rem solid var(--nc-focus-ring);
 }
+.nc-btn:hover, .nc-btn:focus-visible {
+  background-color: var(--nc-hover);
+}
 .nc-btn[data-style=simple] {
   padding: 0.25em 0.5em;
   border: 0.1em solid var(--nc-border);
