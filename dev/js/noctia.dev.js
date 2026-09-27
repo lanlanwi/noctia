@@ -909,6 +909,49 @@ function initLicense(root = document) {
   });
 }
 
+// src/ts/components/navigation.ts
+function createElm3(cls, id, text) {
+  const link = document.createElement("li");
+  link.className = `${cls}-added`;
+  const anchor = document.createElement("a");
+  anchor.href = `#${id}`;
+  anchor.textContent = text;
+  link.appendChild(anchor);
+  return link;
+}
+function enhanceNavigation(elm) {
+  throwIf(!(elm instanceof HTMLElement), "enhanceNavigation: Expected an HTMLElement.");
+  const targetClass = elm.dataset.navigation;
+  if (!targetClass) return;
+  function addLink() {
+    removeLink();
+    const container = elm.querySelector("ul");
+    if (!container) return;
+    const target = document.querySelectorAll(`.${targetClass}`);
+    target.forEach((t, i) => {
+      const id = t.id || `${targetClass}-${i}`;
+      t.id = id;
+      const newLink = createElm3(targetClass, id, t.textContent);
+      container.appendChild(newLink);
+    });
+  }
+  function removeLink() {
+    const target = elm.querySelectorAll(`li.${targetClass}-added`);
+    target.forEach((t) => t.remove());
+  }
+  addLink();
+  return {
+    addLink,
+    removeLink
+  };
+}
+function initNavigation(root = document) {
+  const navigationElms = root.querySelectorAll("nav[data-navigation]");
+  navigationElms.forEach((elm) => {
+    enhanceNavigation(elm);
+  });
+}
+
 // src/ts/components/init.ts
 function initComponents(root = document) {
   throwIf(
@@ -920,6 +963,7 @@ function initComponents(root = document) {
   initCodeBlock(root);
   initDrawer(root);
   initLicense(root);
+  initNavigation(root);
 }
 
 // src/ts/index.ts
@@ -942,6 +986,7 @@ export {
   createId,
   enhanceAccordion,
   enhanceCodeBlock,
+  enhanceNavigation,
   getTheme,
   getTransitionTime,
   hideOverlay,
@@ -956,6 +1001,7 @@ export {
   initFeatures,
   initLayouts,
   initLicense,
+  initNavigation,
   initNoctia,
   initTheme,
   nextFrame,

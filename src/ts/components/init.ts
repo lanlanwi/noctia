@@ -5,6 +5,7 @@ import { initBreadcrumb } from './breadcrumb';
 import { initCodeBlock } from './code-block';
 import { initDrawer } from './drawer';
 import { initLicense } from './license';
+import { initNavigation } from './navigation';
 
 export function initComponents(root: Document | HTMLElement = document) {
   throwIf(
@@ -17,4 +18,5 @@ export function initComponents(root: Document | HTMLElement = document) {
   initCodeBlock(root);
   initDrawer(root);
   initLicense(root);
+  initNavigation(root);
 }
